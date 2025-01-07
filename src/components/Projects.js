@@ -36,7 +36,7 @@ const Projects = () => {
                     <span className="text-sm mx-2">{project.type}</span>
                   </h1>
 
-                  <h2 className="text-gray-600 mt-2">{project.sub_title}</h2>
+                  <h2 className="text-gray-400 mt-2">{project.sub_title}</h2>
                   <i className="text-gray-800 text-lg mt-5">
                     {project.description.map((desc, i) => {
                       return <p className="my-2">{desc}</p>;

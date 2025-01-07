@@ -1,0 +1,45 @@
+{
+  "skillSets": [
+    {
+      "id": 1,
+      "topic": "Frontend",
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "Bootstrap5",
+        "Tailwind CSS",
+        "JavaScript ES6",
+        "JSON",
+        "jQuery",
+        "ReactJs",
+        " Redux-toolkit",
+        "React testing library"
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Backend",
+      "skills": ["Rest API", "MySQL", "PostgreSQL"]
+    },
+    {
+      "id": 3,
+      "topic": "Version Control",
+      "skills": ["Github", "Bitbucket"]
+    },
+    {
+      "id": 4,
+      "topic": "Other Tools",
+      "skills": [
+        "Jira",
+        "Asana",
+        "Visual Studio Code",
+        "Developer Tools(Chrome, React, and Redux)"
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Familiar Technologies",
+      "skills": [" Fast API", "Postman", "Figma"]
+    }
+  ]
+}

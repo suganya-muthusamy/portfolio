@@ -9,9 +9,9 @@ const Home = () => {
             Hi! I am Suganya Anbazhagan
           </h1>
           <p className="text-2xl font-medium leading-10">
-            A passionate Frontend Developer with expertise in ReactJS. <br />A
-            knack for creating stunning, responsive web applications. Let's
-            build something amazing together!
+            With over 3 years of experience as a Frontend Developer with
+            expertise in ReactJS, I have successfully built stunning, responsive
+            web applications.
           </p>
         </div>
       </div>

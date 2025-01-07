@@ -13,7 +13,7 @@ const Navbar = () => {
   const mobileActiveLink = "text-sand-tan";
 
   return (
-    <nav className="bg-sand-tan absolute top-0 w-[100vw]">
+    <nav className="bg-sand-tan absolute top-0 w-full">
       <div className="w-full xl:w-[1140px] px-4 xl:px-0 py-5 xl:mx-auto flex justify-between">
         <h1 className="text-3xl font-bold tracking-wider w-3/12">Suganya</h1>
 

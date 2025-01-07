@@ -9,13 +9,14 @@ const Navbar = () => {
     setMenuBar(!menuBar);
   };
 
-  const activeLink = "text-night-blue";
-  const mobileActiveLink = "text-sand-tan";
+  const activeLink = "text-white transition ease-in-out duration-700";
 
   return (
-    <nav className="bg-sand-tan absolute top-0 w-full">
-      <div className="w-full xl:w-[1140px] px-4 xl:px-0 py-5 xl:mx-auto flex justify-between">
-        <h1 className="text-3xl font-bold tracking-wider w-3/12">Suganya</h1>
+    <nav className="absolute top-0 w-full bg-red">
+      <div className="w-full xl:w-[1140px] px-4 xl:px-0 py-5 xl:mx-auto flex justify-between items-center text-gray-300">
+        <h1 className="text-4xl font-bold tracking-wider w-3/12 font-mono">
+          Suganya
+        </h1>
 
         <ul className="hidden sm:flex font-medium text-lg w-9/12 justify-end">
           <li className="mr-10">
@@ -53,61 +54,55 @@ const Navbar = () => {
         </ul>
         <button
           onClick={handleMenuBar}
-          className="px-4 py-2 mx-3 sm:hidden bg-night-blue rounded-md text-white font-semibold"
+          className="px-4 py-2 mx-3 sm:hidden bg-gray-300  text-red rounded-md  font-semibold"
         >
           <TiThMenu />
         </button>
       </div>
 
       {menuBar && (
-        <div className="absolute top-0 left-0 pb-2 w-[320px] shadow-lg bg-night-blue z-10 transition ease-in-out">
+        <div className="absolute top-0 left-0 pb-2 w-[320px] shadow-lg bg-red z-10 transition ease-in-out">
           <div className=" p-5 ">
-            <div className="flex justify-between">
-              <div className="text-2xl font-bold tracking-wider ">Suganya</div>
+            <div className="flex justify-between text-gray-300">
+              <a href="/" className="text-2xl font-bold tracking-wider ">
+                Suganya
+              </a>
               <button onClick={handleMenuBar} className=" text-xl font-bold">
                 <FaWindowClose />
               </button>
             </div>
-            <ul className="mt-5 font-medium text-lg">
+            <ul className="mt-5 font-medium text-lg text-gray-300">
               <li className="mr-10 mt-3">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? mobileActiveLink : " "
-                  }
-                  to="/"
+                <a
+                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  href="/"
                 >
                   Home
-                </NavLink>
+                </a>
               </li>
               <li className="mr-10 mt-3">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? mobileActiveLink : " "
-                  }
-                  to="/about"
+                <a
+                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  href="/about"
                 >
                   About
-                </NavLink>
+                </a>
               </li>
               <li className="mr-10 mt-3">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? mobileActiveLink : " "
-                  }
-                  to="/projects"
+                <a
+                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  href="/projects"
                 >
                   Projects
-                </NavLink>
+                </a>
               </li>
               <li className="mr-10 mt-3">
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? mobileActiveLink : " "
-                  }
-                  to="/contact"
+                <a
+                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  href="/contact"
                 >
                   Contact
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>

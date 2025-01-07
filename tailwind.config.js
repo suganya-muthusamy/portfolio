@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "sand-tan": "#e1b382",
-        "sand-tan-shadow": "#c89666",
-        "night-blue": "#2d545e",
-        "night-blue-shadow": "#12343b",
+        red: "#8C2B32",
+        green: "#7192AE",
+        darkGreen: "#399179",
+        blue: "#1274B5",
+        pink: "#CC2B52",
+        "lighter-green": "#EAF9F6",
+        "navy-blue": "#161A42",
       },
     },
   },

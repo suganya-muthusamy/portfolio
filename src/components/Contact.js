@@ -33,14 +33,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-20">
+    <div className=" py-20">
       <div className="w-full xl:w-[1140px] px-4 xl:px-0 xl:mx-auto gap-7 h-full">
         <div className="flex justify-between space-x-4 my-5">
           <a
             href="https://www.linkedin.com/in/suganya-anbazhagan-6669301a4/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 text-4xl"
+            className="text-blue text-4xl"
           >
             <FaLinkedin />
           </a>
@@ -54,7 +54,7 @@ const Contact = () => {
           </a>
         </div>
         <div className="my-5 flex flex-col items-center">
-          <h2 className="text-2xl font-bold my-5">Contact Me</h2>
+          <h2 className="text-2xl font-bold my-5 text-blue">Contact Me</h2>
           <p className="mb-10 text-lg text-gray-600">
             Send me an email by submitting the form below and I will get back to
             you as soon as possible!
@@ -62,7 +62,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col w-full md:w-[400px] bg-slate-50 p-5 md:p-10 rounded"
+            className="flex flex-col w-full sm:w-[450px] bg-lighter-green p-5 md:p-10 rounded shadow"
           >
             <input
               type="text"
@@ -86,7 +86,7 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="mt-5 p-2 w-fit bg-night-blue text-white rounded"
+              className="mt-5 py-2 px-4 w-fit bg-darkGreen text-lg text-white rounded"
             >
               Send Message
             </button>

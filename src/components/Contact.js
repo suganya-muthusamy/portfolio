@@ -1,10 +1,36 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [ismessageSend, setIsMessageSend] = useState(false);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.to(".linkedin", {
+      rotation: 360,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+    });
+
+    gsap.to(".github", {
+      rotation: -360,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+    });
+
+    gsap.fromTo(
+      ".form",
+      { opacity: 0, y: -50 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+  }, []);
 
   const form = useRef();
 
@@ -35,25 +61,27 @@ const Contact = () => {
   return (
     <div className=" py-20">
       <div className="w-full xl:w-[1140px] px-4 xl:px-0 xl:mx-auto gap-7 h-full">
-        <div className="flex justify-between space-x-4 my-5">
+        <div className="flex justify-center space-x-4 mt-10 mb-5">
           <a
+            title="Linkedin"
             href="https://www.linkedin.com/in/suganya-anbazhagan-6669301a4/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue text-4xl"
+            className="text-blue linkedin text-4xl"
           >
             <FaLinkedin />
           </a>
           <a
+            title="Github"
             href="https://github.com/suganya-muthusamy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 text-4xl"
+            className="text-gray-800 github text-4xl"
           >
             <FaGithub />
           </a>
         </div>
-        <div className="my-5 flex flex-col items-center">
+        <div className="form my-5 flex flex-col items-center">
           <h2 className="text-2xl font-bold my-5 text-blue">Contact Me</h2>
           <p className="mb-10 text-lg text-gray-600">
             Send me an email by submitting the form below and I will get back to
@@ -86,7 +114,7 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="mt-5 py-2 px-4 w-fit bg-darkGreen text-lg text-white rounded"
+              className="mt-5 py-2 px-4 w-fit bg-darkGreen text-lg text-white rounded hover:opacity-85 transition-all ease-in-out"
             >
               Send Message
             </button>

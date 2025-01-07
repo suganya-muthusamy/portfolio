@@ -1,4 +1,3 @@
-import React from "react";
 import skipTheKitchen_URL from "./skip-the-kitchen.png";
 import netflixGPT_URL from "./netflix-gpt.png";
 import LMA_URL from "./lakshmi-medical-academy.png";

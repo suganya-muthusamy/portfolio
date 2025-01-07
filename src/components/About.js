@@ -1,12 +1,71 @@
 import React from "react";
 import data from "./../datasets/skills.json";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const About = () => {
-  console.log(data, "slills");
+  // animation
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      ".my-16.md\\:my-24.bg-lighter-green.p-10",
+      { autoAlpha: 0, y: 50 },
+      {
+        duration: 1,
+        autoAlpha: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".my-16.md\\:my-24.bg-lighter-green.p-10",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.utils.toArray(".mb-10").forEach((section) => {
+      gsap.fromTo(
+        section,
+        { autoAlpha: 0, y: 50 },
+        {
+          duration: 1,
+          autoAlpha: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    gsap.utils.toArray(".py-20 > div").forEach((section) => {
+      gsap.fromTo(
+        section,
+        { autoAlpha: 0, y: 50 },
+        {
+          duration: 1,
+          autoAlpha: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <div className="py-20">
       <div className="w-full xl:w-[1140px] px-4 xl:px-0 xl:mx-auto gap-7 h-full">
-        <div className="mb-5 mt-10">
+        <div className="start mb-5 mt-10">
           <h2 className="text-xl font-bold tracking-wide text-blue">
             About Me
           </h2>
@@ -15,20 +74,32 @@ const About = () => {
             current skills in terms of programming and technology.
           </p>
         </div>
-        <div className="my-16 md:my-24 bg-lighter-green p-10">
+        <div className=" my-16 md:my-24 bg-lighter-green p-10">
           <h1 className="text-3xl font-bold my-5 tracking-wider text-darkGreen">
             Get to know me!
           </h1>
 
-          <p className="text-lg leading-10 text-gray-600">
+          <p className=" text-lg leading-10 text-gray-600">
             I'm a Frontend Focused Web Developer building and managing the
             Front-end of Websites and Web Applications mostly using ReactJs,
             that leads to the success of the overall product. Check out some of
-            my work in the Projects section.
+            my work in the{" "}
+            <a
+              href="/projects"
+              className="text-blue underline hover:opacity-85 transition-all ease-in-out"
+            >
+              Projects section.
+            </a>
             <br /> <br />
             I'm open to Job opportunities where I can contribute, learn and
             grow. If you have a good opportunity that matches my skills and
-            experience then don't hesitate to contact me.
+            experience then don't hesitate to{" "}
+            <a
+              href="/contact"
+              className="text-blue underline hover:opacity-85 transition-all ease-in-out"
+            >
+              contact me.
+            </a>
           </p>
         </div>
         <div className="">

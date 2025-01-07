@@ -7,7 +7,7 @@ const Footer = () => {
       <p className="text-sm">
         &copy; {currentYear} Copyright. Made by{" "}
         <a href="/" className="text-lighter-green font-medium underline mx-2">
-          Suganya anbazhagan.
+          Suganya Anbazhagan.
         </a>
       </p>
     </footer>

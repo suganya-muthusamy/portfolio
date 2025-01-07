@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaWindowClose } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 
@@ -14,14 +14,21 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 w-full bg-red">
       <div className="w-full xl:w-[1140px] px-4 xl:px-0 py-5 xl:mx-auto flex justify-between items-center text-gray-300">
-        <h1 className="text-4xl font-bold tracking-wider w-3/12 font-mono">
+        <a
+          href="/"
+          className="text-4xl font-bold tracking-wider w-3/12 font-mono"
+        >
           Suganya
-        </h1>
+        </a>
 
         <ul className="hidden sm:flex font-medium text-lg w-9/12 justify-end">
           <li className="mr-10">
             <NavLink
-              className={({ isActive }) => (isActive ? activeLink : " ")}
+              className={({ isActive }) =>
+                isActive
+                  ? activeLink
+                  : "hover:text-white transition-all ease-in-out"
+              }
               to="/"
             >
               Home
@@ -29,7 +36,11 @@ const Navbar = () => {
           </li>
           <li className="mr-10">
             <NavLink
-              className={({ isActive }) => (isActive ? activeLink : " ")}
+              className={({ isActive }) =>
+                isActive
+                  ? activeLink
+                  : "hover:text-white transition-all ease-in-out "
+              }
               to="/about"
             >
               About
@@ -37,7 +48,11 @@ const Navbar = () => {
           </li>
           <li className="mr-10">
             <NavLink
-              className={({ isActive }) => (isActive ? activeLink : " ")}
+              className={({ isActive }) =>
+                isActive
+                  ? activeLink
+                  : "hover:text-white transition-all ease-in-out "
+              }
               to="/projects"
             >
               Projects
@@ -45,7 +60,11 @@ const Navbar = () => {
           </li>
           <li className="mr-10">
             <NavLink
-              className={({ isActive }) => (isActive ? activeLink : " ")}
+              className={({ isActive }) =>
+                isActive
+                  ? activeLink
+                  : "hover:text-white transition-all ease-in-out "
+              }
               to="/contact"
             >
               Contact
@@ -74,7 +93,11 @@ const Navbar = () => {
             <ul className="mt-5 font-medium text-lg text-gray-300">
               <li className="mr-10 mt-3">
                 <a
-                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  className={({ isActive }) =>
+                    isActive
+                      ? activeLink
+                      : " hover:text-white transition-all ease-in-out"
+                  }
                   href="/"
                 >
                   Home
@@ -82,7 +105,11 @@ const Navbar = () => {
               </li>
               <li className="mr-10 mt-3">
                 <a
-                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  className={({ isActive }) =>
+                    isActive
+                      ? activeLink
+                      : "hover:text-white transition-all ease-in-out"
+                  }
                   href="/about"
                 >
                   About
@@ -90,7 +117,11 @@ const Navbar = () => {
               </li>
               <li className="mr-10 mt-3">
                 <a
-                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  className={({ isActive }) =>
+                    isActive
+                      ? activeLink
+                      : "hover:text-white transition-all ease-in-out"
+                  }
                   href="/projects"
                 >
                   Projects
@@ -98,7 +129,11 @@ const Navbar = () => {
               </li>
               <li className="mr-10 mt-3">
                 <a
-                  className={({ isActive }) => (isActive ? activeLink : " ")}
+                  className={({ isActive }) =>
+                    isActive
+                      ? activeLink
+                      : "hover:text-white transition-all ease-in-out"
+                  }
                   href="/contact"
                 >
                   Contact

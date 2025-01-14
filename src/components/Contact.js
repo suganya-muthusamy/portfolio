@@ -41,17 +41,15 @@ const Contact = () => {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
+    await emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_KEY,
         process.env.REACT_APP_EMAILJS_TEMPLATE_KEY,
         form.current,
-        {
-          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
-        }
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {

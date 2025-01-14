@@ -12,14 +12,15 @@
         "JSON",
         "jQuery",
         "ReactJs",
-        " Redux-toolkit",
-        "React testing library"
+        " Redux-Toolkit",
+        "React Testing Library",
+        "Jest"
       ]
     },
     {
       "id": 2,
       "topic": "Backend",
-      "skills": ["Rest API", "MySQL", "PostgreSQL"]
+      "skills": ["Rest API", "MySQL", "PostgreSQL", "Postman"]
     },
     {
       "id": 3,
@@ -39,7 +40,7 @@
     {
       "id": 5,
       "topic": "Familiar Technologies (Basics)",
-      "skills": [" Fast API", "Postman", "Figma"]
+      "skills": [" Fast API", "Figma", "GSAP"]
     }
   ]
 }

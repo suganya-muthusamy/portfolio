@@ -8,6 +8,13 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [ismessageSend, setIsMessageSend] = useState(false);
 
+  console.log(
+    process.env.REACT_APP_EMAILJS_SERVICE_KEY,
+    process.env.REACT_APP_EMAILJS_TEMPLATE_KEY,
+    process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+    "testing----------"
+  );
+
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -38,9 +45,14 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_sj603ma", "template_ali53qu", form.current, {
-        publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
-      })
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_KEY,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_KEY,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           setIsMessageSend(true);

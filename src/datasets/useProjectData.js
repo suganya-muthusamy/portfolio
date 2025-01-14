@@ -25,7 +25,7 @@ const useProjectData = () => {
         "Clone app inspired from Netflix, the movie streaming web application",
       description: [
         "I have fetched the real time movie datas from 'The Movie Database(TMDB)",
-        "The search bar is integrated with chatGPT in order to act as a movie recommendation system and implemented multi-lingual searc-hbar.",
+        "The search bar is integrated with chatGPT in order to act as a movie recommendation system and implemented multi-lingual search bar.",
       ],
       img_url: netflixGPT_URL,
       git_url: "https://github.com/suganya-muthusamy/netflix-GPT",

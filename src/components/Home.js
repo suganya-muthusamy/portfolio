@@ -38,7 +38,7 @@ const Home = () => {
             Hi! I am Suganya Anbazhagan
           </h1>
           <p className="text-xl md:text-2xl font-medium leading-10 text-gray-600">
-            With over 4 years of experience as a Frontend Developer with
+            With over 3 years of experience as a Frontend Developer with
             expertise in ReactJS, I have successfully built stunning, responsive
             web applications.
           </p>

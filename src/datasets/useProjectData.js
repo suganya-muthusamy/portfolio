@@ -1,6 +1,7 @@
 import skipTheKitchen_URL from "./skip-the-kitchen.png";
 import netflixGPT_URL from "./netflix-gpt.png";
 import LMA_URL from "./lakshmi-medical-academy.png";
+import YOUTUBE_URL from "./youtube.png";
 
 const useProjectData = () => {
   const projectList = [
@@ -44,6 +45,22 @@ const useProjectData = () => {
       img_url: LMA_URL,
       live_url: "https://lakshmimedicalacademy.com/",
     },
+    {
+      id: 4,
+      type: "Personal",
+      title: "YouTube Clone",
+      sub_title: "A feature-rich clone of YouTube with video streaming functionality",
+      description: [
+        "Fetched real-time video data using the YouTube Data API for dynamic content updates.",
+        "Implemented a responsive UI with a sidebar, video player, and recommendation section similar to YouTube.",
+        "Integrated search functionality with debouncing and cached results to allowing users best search experience.",
+        "Implemented recursion for n-level nested comments"
+      ],
+      img_url: YOUTUBE_URL,
+      git_url: "https://github.com/suganya-muthusamy/my-youtube",
+      live_url:"https://tube-search-eight.vercel.app/"
+    }
+    
   ];
   return projectList;
 };
